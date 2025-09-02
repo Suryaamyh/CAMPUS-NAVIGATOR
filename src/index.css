@@ -1,0 +1,232 @@
+
+body {
+  margin: 0;
+ 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #453f3c;
+}
+
+#root {
+  height: 100vh;
+  padding-top:15vh ;
+}
+
+.page-container {
+  
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  transition: background 0.5s ease;
+}
+
+.page-container{
+  background: linear-gradient(-45deg, #f5f5f5, #d9e4f5, #eef3f8, #ffffff);
+  color: #1e1e1e;
+}
+
+
+
+.navigator-controls {
+  animation: fadeIn 0.6s ease-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navigator-controls input,
+.navigator-controls button {
+  transition: all 0.2s ease;
+}
+
+.navigator-controls button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.search-input {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 12px;
+  
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.search-input.day {
+  background-color: #ffffff;
+  color: #222;
+
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.search-input.night {
+  background-color: #2c2c2c;
+  color: #eee;
+ 
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+
+.search-button {
+  padding: 10px 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.search-button {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: white;
+  box-shadow: 0 3px 10px rgba(255, 111, 97, 0.3);
+}
+
+
+
+.mic-button {
+  color: white;
+   background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.mic-button:hover {
+  transform: scale(1.05);
+}
+
+.mic-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.mic-button.listening {
+  background-color: #f94144;
+  color: #fff;
+  box-shadow: 0 0 12px 4px #0e0b0b;
+}
+
+.mic-button.day {
+   background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #fff;
+}
+
+.mic-button.night {
+  background-color: #f6bd60;
+  color: #000;
+}
+
+.theme-toggle-btn {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn.day {
+     background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: white;
+}
+
+.theme-toggle-btn.night {
+  background-color: #f6bd60;
+  color: black;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Dark Theme & Sidebar */
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #1e1e1e;
+  box-shadow: 0 0 20px rgba(0, 255, 231, 0.1);
+  border-radius: 10px;
+}
+
+/* Responsive Glowing Sidebar */
+.sidebar {
+  position: fixed;
+  top: 80px; /* below header */
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 80px);
+  background: linear-gradient(to bottom, #111, #1e1e1e);
+  box-shadow: 0 0 20px rgba(0, 255, 231, 0.2);
+  padding: 1rem;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.sidebar h3 {
+  color: #00ffe7;
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  display: block;
+  color: #00ffe7;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #00ffe7;
+  color: #121212;
+  box-shadow: 0 0 10px #00ffe7;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .sidebar a {
+    margin: 0.5rem;
+  }
+}

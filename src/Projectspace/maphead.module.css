@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.header {
+ 
+  transition: background 0.3s ease;
+  backdrop-filter: none ;
+
+  z-index: 1001;
+  background-color:#161a1d;
+  color: #f5f5f5;
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+ 
+  font-family: 'Orbitron', sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #cbf3f0;
+
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+
+.menuIcon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+   color: #cbf3f0;
+  margin-left: auto;
+  z-index: 1001;
+}
+
+/* -------------------- DESKTOP MENU -------------------- */
+
+.desktopMenu {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.desktopOpt {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.desktopOpt .optItem a {
+  
+  color: rgb(165, 160, 160);
+  padding: 10px 24px;
+  border-radius: 10px;
+
+  text-decoration: none;
+  opacity: 0.9;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+ 
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.desktopOpt .optItem a:hover,
+.desktopOpt .optItem a.active {
+  
+  color:#f1f7f5;
+  transform: scale(1.05);
+}
+
+/* -------------------- MOBILE MENU -------------------- */
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background:#161a1d;
+  z-index: 999;
+  padding: 2rem 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 1px solid whitesmoke;
+}
+
+.mobileOpt {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.mobileOpt .optItem a {
+  display: block;
+  width: 70%;
+  padding: 14px 20px;
+  background-color: transparent;
+  color: whitesmoke;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.mobileOpt .optItem a:hover,
+.mobileOpt .optItem a.active {
+  color: blue;
+  transform: scale(1.05);
+}
+
+/* -------------------- SCROLL TO TOP -------------------- */
+
+.scrollToTopBtn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  padding: 0.7rem 1rem;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 60px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.scrollToTopBtn:hover {
+  
+  background-color: #224265;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobileMenu {
+    display: none;
+  }
+
+  .mobileOpt {
+    display: none;
+  }
+}
