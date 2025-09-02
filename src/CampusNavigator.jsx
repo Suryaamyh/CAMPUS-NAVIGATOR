@@ -133,7 +133,7 @@ export default function CampusNavigator() {
   return (
     <div className="page-container">
       <h1 style={{ fontSize: "2.2rem", marginBottom: "1.2rem", color: "black" }}>
-        CampusNavigator
+        Campus Navigator
       </h1>
 
       <div className="navigator-controls" style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px", padding: "10px 20px", borderRadius: "12px", backgroundColor: "#ffffff", boxShadow: "0 4px 12px rgba(0,0,0,0.1)", flexWrap: "wrap", justifyContent: "center", width: "100%", maxWidth: "900px" }}>
